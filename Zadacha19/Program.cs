@@ -4,9 +4,15 @@
 //12821 -> да
 //23432 -> да
 
+start:
 Console.WriteLine("Введите пятизначное число");
 int par = int.Parse(Console.ReadLine());
 
+if(par<10000 || par >99999)
+{
+    Console.WriteLine("Пятизначное число пожалуйста.");
+    goto start;
+}
 int a1 = par%10;
 int a2 = par/10000;
 int b1 = (par/10)%10;
